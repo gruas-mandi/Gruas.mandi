@@ -113,6 +113,7 @@ footer img {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .carousel-slide {
@@ -124,4 +125,6 @@ footer img {
   width: 100%;
   display: block;
   border-radius: 10px;
+  object-fit: cover;
 }
+
