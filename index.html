@@ -45,38 +45,82 @@
   </section>
 <!DOCTYPE html>
 
+<!-- Carrusel de imágenes -->
+<div class="carrusel">
+  <div class="carrusel-imagenes">
+    <img src="img/traslado-1.jpg" alt="traslado-1">
+    <img src="img/fondo.jpg" alt="fondo">
+    <img src="img/flete-2.jpg" alt="flete-2">
+    <img src="img/traslado-3.jpg" alt="traslado-3">
+    <img src="img/traslado-4.jpg" alt="traslado-4">
+    <img src="img/flelte-5.jpg" alt="flelte-5">
+    <img src="img/flete-6.jpg" alt="flete-6">
+    <img src="img/traslado-7.jpg" alt="traslado-7">
+    <img src="img/traslado-9.jpg" alt="traslado-9">
+    <img src="img/traslado-10.jpg" alt="traslado-10">
+    <img src="img/traslado-11.jpg" alt="traslado-11">
+    <img src="img/traslado-12.jpg" alt="traslado-12">
+    <img src="img/traslado-13.jpg" alt="traslado-13">
+    <img src="img/traslado-14.jpg" alt="traslado-14">
+    <img src="img/traslado-15.jpg" alt="traslado-15">
+    <img src="img/traslado-16.jpg" alt="traslado-16">
+    <img src="img/traslado-17.jpg" alt="traslado-17">
+    <img src="img/traslado-18.jpg" alt="traslado-18">
+    <img src="img/traslado-19.jpg" alt="traslado-19">
+  </div>
+</div>
 
-  <!-- Carrusel de imágenes -->
-  <section class="carousel">
-    <div class="carousel-track">
+<!-- Estilos del carrusel -->
+<style>
+.carrusel {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
 
-      <div class="carousel-slide"><img src="img/traslado-1.jpg" alt="Traslado 1" /></div>
-      <div class="carousel-slide"><img src="img/fondo.jpg" alt="Fondo" /></div>
-      <div class="carousel-slide"><img src="img/flete-2.jpg" alt="Flete 2" /></div>
-      <div class="carousel-slide"><img src="img/traslado-3.jpg" alt="Traslado 3" /></div>
-      <div class="carousel-slide"><img src="img/traslado-4.jpg" alt="Traslado 4" /></div>
-      <div class="carousel-slide"><img src="img/flete-5.jpg" alt="Flete 5" /></div>
-      <div class="carousel-slide"><img src="img/flete-6.jpg" alt="Flete 6" /></div>
-      <div class="carousel-slide"><img src="img/traslado-7.jpg" alt="Traslado 7" /></div>
-      <div class="carousel-slide"><img src="img/flete-8.jpg" alt="Flete 8" /></div>
-      <div class="carousel-slide"><img src="img/traslado-9.jpg" alt="Traslado 9" /></div>
-      <div class="carousel-slide"><img src="img/traslado-10.jpg" alt="Traslado 10" /></div>
-      <div class="carousel-slide"><img src="img/traslado-11.jpg" alt="Traslado 11" /></div>
-      <div class="carousel-slide"><img src="img/traslado-12.jpg" alt="Traslado 12" /></div>
-      <div class="carousel-slide"><img src="img/traslado-13.jpg" alt="Traslado 13" /></div>
-      <div class="carousel-slide"><img src="img/traslado-14.jpg" alt="Traslado 14" /></div>
-      <div class="carousel-slide"><img src="img/traslado-15.jpg" alt="Traslado 15" /></div>
-      <div class="carousel-slide"><img src="img/traslado-16.jpg" alt="Traslado 16" /></div>
-      <div class="carousel-slide"><img src="img/traslado-17.jpg" alt="Traslado 17" /></div>
-      <div class="carousel-slide"><img src="img/traslado-18.jpg" alt="Traslado 18" /></div>
+.carrusel-imagenes {
+  display: flex;
+  animation: deslizar 60s linear infinite;
+  width: calc(100% * 19); /* 19 imágenes */
+}
 
-      <!-- Duplicamos imágenes para que el carrusel sea continuo -->
-      <div class="carousel-slide"><img src="img/traslado-1.jpg" alt="Traslado 1 duplicado" /></div>
-      <div class="carousel-slide"><img src="img/fondo.jpg" alt="Fondo duplicado" /></div>
-      <div class="carousel-slide"><img src="img/flete-2.jpg" alt="Flete 2 duplicado" /></div>
+.carrusel-imagenes img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  flex: 0 0 100%;
+  border-radius: 10px;
+}
 
-    </div>
-  </section>
+/* Animación */
+@keyframes deslizar {
+  0% { transform: translateX(0); }
+  5.26% { transform: translateX(-100%); }
+  10.53% { transform: translateX(-200%); }
+  15.79% { transform: translateX(-300%); }
+  21.05% { transform: translateX(-400%); }
+  26.32% { transform: translateX(-500%); }
+  31.58% { transform: translateX(-600%); }
+  36.84% { transform: translateX(-700%); }
+  42.11% { transform: translateX(-800%); }
+  47.37% { transform: translateX(-900%); }
+  52.63% { transform: translateX(-1000%); }
+  57.89% { transform: translateX(-1100%); }
+  63.16% { transform: translateX(-1200%); }
+  68.42% { transform: translateX(-1300%); }
+  73.68% { transform: translateX(-1400%); }
+  78.95% { transform: translateX(-1500%); }
+  84.21% { transform: translateX(-1600%); }
+  89.47% { transform: translateX(-1700%); }
+  94.74% { transform: translateX(-1800%); }
+  100% { transform: translateX(0); }
+}
+</style>
+
+
 
 </body>
 </html>
