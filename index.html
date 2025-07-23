@@ -1,222 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Gruas Mandi - Transporte y Fletes</title>
-<style>
-  /* Reset y base */
-  * {
-    box-sizing: border-box;
-  }
-  body {
-    margin: 0; 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #111;
-    color: #ffd700; /* amarillo */
-  }
-  a {
-    color: #ffd700;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-  header {
-    background-color: #000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    border-bottom: 2px solid #ffd700;
-  }
-  header img.logo {
-    height: 50px;
-  }
-  nav a {
-    margin: 0 12px;
-    font-weight: bold;
-    font-size: 1rem;
-  }
-  /* Fondo hero con overlay */
-  .hero {
-    position: relative;
-    height: 300px;
-    background: url('fondo.jpg') no-repeat center center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.6);
-  }
-  .hero h1 {
-    position: relative;
-    font-size: 2.5rem;
-    z-index: 1;
-    text-align: center;
-  }
-
-  main {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 0 15px 40px;
-  }
-
-  /* Navegación por anclajes */
-  section {
-    margin-bottom: 50px;
-  }
-
-  h2 {
-    border-bottom: 3px solid #ffd700;
-    padding-bottom: 6px;
-    margin-bottom: 20px;
-    font-size: 2rem;
-  }
-
-  /* Formulario */
-  form {
-    background-color: #222;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 8px #ffd700;
-  }
-  label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: 600;
-  }
-  input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select, textarea {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 2px solid #ffd700;
-    border-radius: 4px;
-    background-color: #111;
-    color: #ffd700;
-    font-size: 1rem;
-  }
-  textarea {
-    resize: vertical;
-  }
-  button[type="submit"] {
-    background-color: #ffd700;
-    border: none;
-    color: #111;
-    font-weight: 700;
-    padding: 12px 25px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease;
-  }
-  button[type="submit"]:hover {
-    background-color: #e6c200;
-  }
-
-  /* Carrusel */
-  .carousel {
-    position: relative;
-    max-width: 100%;
-    margin: auto;
-    overflow: hidden;
-    border: 3px solid #ffd700;
-    border-radius: 10px;
-  }
-  .carousel-track {
-    display: flex;
-    transition: transform 0.4s ease-in-out;
-  }
-  .carousel-slide {
-    min-width: 100%;
-    user-select: none;
-  }
-  .carousel-slide img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-  .carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(255, 215, 0, 0.8);
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    color: #111;
-    font-weight: bold;
-    user-select: none;
-    transition: background-color 0.3s ease;
-  }
-  .carousel-button:hover {
-    background-color: #e6c200;
-  }
-  .carousel-button.prev {
-    left: 10px;
-  }
-  .carousel-button.next {
-    right: 10px;
-  }
-
-  /* Pie de página */
-  footer {
-    background-color: #000;
-    color: #ffd700;
-    padding: 20px 15px;
-    text-align: center;
-    border-top: 2px solid #ffd700;
-  }
-  footer .contact-icons img {
-    width: 32px;
-    margin: 0 10px;
-    vertical-align: middle;
-    filter: brightness(0) invert(1);
-    transition: filter 0.3s ease;
-    cursor: pointer;
-  }
-  footer .contact-icons img:hover {
-    filter: brightness(0) invert(0.7);
-  }
-
-  /* Responsive */
-  @media (max-width: 600px) {
-    .hero h1 {
-      font-size: 1.8rem;
-      padding: 0 10px;
-    }
-    header nav a {
-      font-size: 0.9rem;
-      margin: 0 8px;
-    }
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gruas Mandi - Transporte y Fletes</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <header>
-  <img src="logo.png" alt="Logo Gruas Mandi" class="logo" />
+  <img src="img/logo.png" alt="Logo Gruas Mandi" class="logo" />
   <nav>
     <a href="#servicios">Servicios</a>
     <a href="#galeria">Galería</a>
     <a href="#formulario">Cotizar</a>
     <a href="#contacto">Contacto</a>
   </nav>
-  <a href="https://wa.me/56964473768?text=Hola%20Gruas%20Mandi%2C%20quiero%20consultar%20sobre%20sus%20servicios" target="_blank" rel="noopener" style="color:#ffd700; font-weight:bold; margin-left:15px;">
+  <a href="https://wa.me/56964473768?text=Hola%20Gruas%20Mandi%2C%20quiero%20consultar%20sobre%20sus%20servicios" target="_blank" rel="noopener" class="whatsapp-link">
     WhatsApp
   </a>
 </header>
-
 
 <section class="hero">
   <h1>Gruas Mandi - Transporte y Fletes en Santiago</h1>
@@ -239,72 +42,71 @@
     <div class="carousel" aria-label="Galería de imágenes de traslados">
       <button class="carousel-button prev" aria-label="Imagen anterior">&#10094;</button>
       <div class="carousel-track">
-        <div class="carousel-slide"><img src="traslado-1.jpg" alt="Traslado 1" /></div>
-        <div class="carousel-slide"><img src="flete-2.jpg" alt="Flete 2" /></div>
-        <div class="carousel-slide"><img src="traslado-3.jpg" alt="Traslado 3" /></div>
-        <div class="carousel-slide"><img src="traslado-4.jpg" alt="Traslado 4" /></div>
-        <div class="carousel-slide"><img src="flete-5.jpg" alt="Flete 5" /></div>
-        <div class="carousel-slide"><img src="flete-6.jpg" alt="Flete 6" /></div>
-        <div class="carousel-slide"><img src="traslado-7.jpg" alt="Traslado 7" /></div>
-        <div class="carousel-slide"><img src="traslado-8.jpg" alt="Traslado 8" /></div>
-        <div class="carousel-slide"><img src="traslado-9.jpg" alt="Traslado 9" /></div>
-        <div class="carousel-slide"><img src="traslado-10.jpg" alt="Traslado 10" /></div>
-        <div class="carousel-slide"><img src="traslado-11.jpg" alt="Traslado 11" /></div>
-        <div class="carousel-slide"><img src="traslado-12.jpg" alt="Traslado 12" /></div>
-        <div class="carousel-slide"><img src="traslado-13.jpg" alt="Traslado 13" /></div>
-        <div class="carousel-slide"><img src="traslado-14.jpg" alt="Traslado 14" /></div>
-        <div class="carousel-slide"><img src="traslado-15.jpg" alt="Traslado 15" /></div>
-        <div class="carousel-slide"><img src="traslado-16.jpg" alt="Traslado 16" /></div>
-        <div class="carousel-slide"><img src="traslado-17.jpg" alt="Traslado 17" /></div>
-        <div class="carousel-slide"><img src="traslado-18.jpg" alt="Traslado 18" /></div>
-        <div class="carousel-slide"><img src="traslado-19.jpg" alt="Traslado 19" /></div>
+        <div class="carousel-slide"><img src="img/traslado-1.jpg" alt="Traslado 1" /></div>
+        <div class="carousel-slide"><img src="img/flete-2.jpg" alt="Flete 2" /></div>
+        <div class="carousel-slide"><img src="img/traslado-3.jpg" alt="Traslado 3" /></div>
+        <div class="carousel-slide"><img src="img/traslado-4.jpg" alt="Traslado 4" /></div>
+        <div class="carousel-slide"><img src="img/flete-5.jpg" alt="Flete 5" /></div>
+        <div class="carousel-slide"><img src="img/flete-6.jpg" alt="Flete 6" /></div>
+        <div class="carousel-slide"><img src="img/traslado-7.jpg" alt="Traslado 7" /></div>
+        <div class="carousel-slide"><img src="img/traslado-8.jpg" alt="Traslado 8" /></div>
+        <div class="carousel-slide"><img src="img/traslado-9.jpg" alt="Traslado 9" /></div>
+        <div class="carousel-slide"><img src="img/traslado-10.jpg" alt="Traslado 10" /></div>
+        <div class="carousel-slide"><img src="img/traslado-11.jpg" alt="Traslado 11" /></div>
+        <div class="carousel-slide"><img src="img/traslado-12.jpg" alt="Traslado 12" /></div>
+        <div class="carousel-slide"><img src="img/traslado-13.jpg" alt="Traslado 13" /></div>
+        <div class="carousel-slide"><img src="img/traslado-14.jpg" alt="Traslado 14" /></div>
+        <div class="carousel-slide"><img src="img/traslado-15.jpg" alt="Traslado 15" /></div>
+        <div class="carousel-slide"><img src="img/traslado-16.jpg" alt="Traslado 16" /></div>
+        <div class="carousel-slide"><img src="img/traslado-17.jpg" alt="Traslado 17" /></div>
+        <div class="carousel-slide"><img src="img/traslado-18.jpg" alt="Traslado 18" /></div>
+        <div class="carousel-slide"><img src="img/traslado-19.jpg" alt="Traslado 19" /></div>
       </div>
       <button class="carousel-button next" aria-label="Imagen siguiente">&#10095;</button>
     </div>
   </section>
 
   <section id="formulario">
-  <h2>Solicita tu traslado / flete</h2>
-  <form action="https://formsubmit.co/gruasmandi@gmail.com" method="POST">
-    
-    <!-- Para evitar spam -->
-    <input type="hidden" name="_captcha" value="false" />
-    
-    <!-- URL a la que redirigir después del envío -->
-    <input type="hidden" name="_next" value="https://tusitio.com/gracias.html" />
-    
-    <label for="nombre">Nombre completo</label>
-    <input type="text" id="nombre" name="Nombre" required />
-  
-    <label for="telefono">Teléfono</label>
-    <input type="tel" id="telefono" name="Teléfono" required pattern="[0-9+\s\-]{7,15}" placeholder="+56 9 1234 5678" />
-  
-    <label for="correo">Correo electrónico</label>
-    <input type="email" id="correo" name="Correo" required />
-  
-    <label for="tipo">Empresa o particular</label>
-    <select id="tipo" name="Empresa o particular" required>
-      <option value="">-- Selecciona --</option>
-      <option value="Empresa">Empresa</option>
-      <option value="Particular">Particular</option>
-    </select>
-  
-    <label for="origen">Dirección y comuna de origen</label>
-    <input type="text" id="origen" name="Origen" required placeholder="Ej: Av. Los Leones 123, Providencia" />
-  
-    <label for="destino">Dirección y comuna de destino</label>
-    <input type="text" id="destino" name="Destino" required placeholder="Ej: Av. La Florida 456, La Florida" />
-  
-    <label for="fecha">Fecha del traslado o flete</label>
-    <input type="date" id="fecha" name="Fecha" required />
-  
-    <label for="mensaje">Mensaje adicional</label>
-    <textarea id="mensaje" name="Mensaje" rows="4" placeholder="Información adicional"></textarea>
-  
-    <button type="submit">Enviar solicitud</button>
-  </form>
-</section>
+    <h2>Solicita tu traslado / flete</h2>
+    <form action="https://formsubmit.co/gruasmandi@gmail.com" method="POST">
 
+      <!-- Para evitar spam -->
+      <input type="hidden" name="_captcha" value="false" />
+
+      <!-- URL a la que redirigir después del envío -->
+      <input type="hidden" name="_next" value="gracias.html" />
+
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" name="Nombre" required />
+
+      <label for="telefono">Teléfono</label>
+      <input type="tel" id="telefono" name="Teléfono" required pattern="[0-9+\s\-]{7,15}" placeholder="+56 9 1234 5678" />
+
+      <label for="correo">Correo electrónico</label>
+      <input type="email" id="correo" name="Correo" required />
+
+      <label for="tipo">Empresa o particular</label>
+      <select id="tipo" name="Empresa o particular" required>
+        <option value="">-- Selecciona --</option>
+        <option value="Empresa">Empresa</option>
+        <option value="Particular">Particular</option>
+      </select>
+
+      <label for="origen">Dirección y comuna de origen</label>
+      <input type="text" id="origen" name="Origen" required placeholder="Ej: Av. Los Leones 123, Providencia" />
+
+      <label for="destino">Dirección y comuna de destino</label>
+      <input type="text" id="destino" name="Destino" required placeholder="Ej: Av. La Florida 456, La Florida" />
+
+      <label for="fecha">Fecha del traslado o flete</label>
+      <input type="date" id="fecha" name="Fecha" required />
+
+      <label for="mensaje">Mensaje adicional</label>
+      <textarea id="mensaje" name="Mensaje" rows="4" placeholder="Información adicional"></textarea>
+
+      <button type="submit">Enviar solicitud</button>
+    </form>
+  </section>
 
   <section id="contacto">
     <h2>Contacto</h2>
@@ -319,17 +121,16 @@
   <p>© 2025 Gruas Mandi - Todos los derechos reservados.</p>
   <div class="contact-icons">
     <a href="https://www.instagram.com/gruas.mandi" target="_blank" rel="noopener" aria-label="Instagram">
-      <img src="instagram.png" alt="Instagram" />
+      <img src="img/instagram.png" alt="Instagram" />
     </a>
     <a href="mailto:Gruasmandi@gmail.com" aria-label="Correo electrónico">
-      <img src="gmail.png" alt="Correo electrónico" />
+      <img src="img/gmail.png" alt="Correo electrónico" />
     </a>
     <a href="https://wa.me/56964473768?text=Hola%20Gruas%20Mandi%2C%20quiero%20consultar%20sobre%20sus%20servicios" target="_blank" rel="noopener" aria-label="WhatsApp">
-      <img src="whatsapp.png" alt="WhatsApp" />
+      <img src="img/whatsapp.png" alt="WhatsApp" />
     </a>
   </div>
 </footer>
-
 
 <script>
   // JavaScript para carrusel simple
