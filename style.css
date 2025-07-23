@@ -108,25 +108,32 @@ footer img {
 }
 
 .carousel {
-  max-width: 700px;
-  margin: 40px auto;
-  position: relative;
-  border-radius: 10px;
+  width: 100%;
+  max-width: 100%;
+  margin: 30px auto;
   overflow: hidden;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: auto;
 }
 
 .carousel-slide {
   display: none;
   width: 100%;
+  height: auto;
 }
 
 .carousel-slide img {
   width: 100%;
-  display: block;
-  border-radius: 10px;
+  height: auto;
   object-fit: cover;
+  border-radius: 8px;
 }
+
+
 
 .menu-header {
   background-color: rgba(0, 0, 0, 0.6);
