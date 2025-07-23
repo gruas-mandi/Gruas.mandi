@@ -30,41 +30,51 @@
   <section id="servicios">
     <h2>Servicios</h2>
     <ul>
-      <li>Arriendo de grúas horquilla</li>
-      <li>Traslado de camiones y maquinaria</li>
-      <li>Montajes industriales</li>
+      <li>Servicio de Grua de Rescate</li>
+      <li>Trasladoos y Fletes</li>
+      <li>Dentro y fuera de Santiago</li>
       <li>Servicios para particulares y empresas</li>
     </ul>
   </section>
 
-  <section id="galeria">
-    <h2>Galería de Traslados</h2>
-    <div class="carousel" aria-label="Galería de imágenes de traslados">
-      <button class="carousel-button prev" aria-label="Imagen anterior">&#10094;</button>
-      <div class="carousel-track">
-        <div class="carousel-slide"><img src="img/traslado-1.jpg" alt="Traslado 1" /></div>
-        <div class="carousel-slide"><img src="img/flete-2.jpg" alt="Flete 2" /></div>
-        <div class="carousel-slide"><img src="img/traslado-3.jpg" alt="Traslado 3" /></div>
-        <div class="carousel-slide"><img src="img/traslado-4.jpg" alt="Traslado 4" /></div>
-        <div class="carousel-slide"><img src="img/flete-5.jpg" alt="Flete 5" /></div>
-        <div class="carousel-slide"><img src="img/flete-6.jpg" alt="Flete 6" /></div>
-        <div class="carousel-slide"><img src="img/traslado-7.jpg" alt="Traslado 7" /></div>
-        <div class="carousel-slide"><img src="img/traslado-8.jpg" alt="Traslado 8" /></div>
-        <div class="carousel-slide"><img src="img/traslado-9.jpg" alt="Traslado 9" /></div>
-        <div class="carousel-slide"><img src="img/traslado-10.jpg" alt="Traslado 10" /></div>
-        <div class="carousel-slide"><img src="img/traslado-11.jpg" alt="Traslado 11" /></div>
-        <div class="carousel-slide"><img src="img/traslado-12.jpg" alt="Traslado 12" /></div>
-        <div class="carousel-slide"><img src="img/traslado-13.jpg" alt="Traslado 13" /></div>
-        <div class="carousel-slide"><img src="img/traslado-14.jpg" alt="Traslado 14" /></div>
-        <div class="carousel-slide"><img src="img/traslado-15.jpg" alt="Traslado 15" /></div>
-        <div class="carousel-slide"><img src="img/traslado-16.jpg" alt="Traslado 16" /></div>
-        <div class="carousel-slide"><img src="img/traslado-17.jpg" alt="Traslado 17" /></div>
-        <div class="carousel-slide"><img src="img/traslado-18.jpg" alt="Traslado 18" /></div>
-        <div class="carousel-slide"><img src="img/traslado-19.jpg" alt="Traslado 19" /></div>
-      </div>
-      <button class="carousel-button next" aria-label="Imagen siguiente">&#10095;</button>
+  <section class="carousel">
+  <div class="carousel-container">
+    <div class="carousel-slide">
+      <img src="img/traslado-1.jpg" alt="Traslado 1" />
     </div>
-  </section>
+    <div class="carousel-slide">
+      <img src="img/flete-2.jpg" alt="Flete 2" />
+    </div>
+    <div class="carousel-slide">
+      <img src="img/traslado-3.jpg" alt="Traslado 3" />
+    </div>
+    <!-- Puedes seguir agregando más imágenes -->
+  </div>
+</section>
+
+<script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('.carousel-slide');
+  const totalSlides = slides.length;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.style.display = i === index ? 'block' : 'none';
+    });
+  }
+
+  function nextSlide() {
+    slideIndex = (slideIndex + 1) % totalSlides;
+    showSlide(slideIndex);
+  }
+
+  // Mostrar primer slide
+  showSlide(slideIndex);
+
+  // Cambiar cada 4 segundos
+  setInterval(nextSlide, 4000);
+</script>
+
 
   <section id="formulario">
     <h2>Solicita tu traslado / flete</h2>
@@ -132,35 +142,7 @@
   </div>
 </footer>
 
-<script>
-  // JavaScript para carrusel simple
-  const track = document.querySelector('.carousel-track');
-  const slides = Array.from(track.children);
-  const prevBtn = document.querySelector('.carousel-button.prev');
-  const nextBtn = document.querySelector('.carousel-button.next');
 
-  let currentIndex = 0;
-
-  function updateCarousel() {
-    const slideWidth = slides[0].getBoundingClientRect().width;
-    track.style.transform = 'translateX(' + (-slideWidth * currentIndex) + 'px)';
-  }
-
-  prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    updateCarousel();
-  });
-
-  nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % slides.length;
-    updateCarousel();
-  });
-
-  window.addEventListener('resize', updateCarousel);
-
-  // Inicializa posición
-  updateCarousel();
-</script>
 
 </body>
 </html>
