@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gruas Mandi - Servicios de Transporte y Gruas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0; padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #3a3a3a;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            background-image: url('fondo.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 0 0 8px rgba(0,0,0,0.7);
+        }
+        .hero h1 {
+            font-size: 2.5em;
+        }
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #3a3a3a;
+            border-bottom: 2px solid #3a3a3a;
+            padding-bottom: 5px;
+        }
+        footer {
+            background-color: #3a3a3a;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 40px;
+        }
+        .contact-form label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .contact-form input, .contact-form textarea, .contact-form select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        .contact-form button {
+            margin-top: 15px;
+            background-color: #3a3a3a;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .contact-form button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gruas Mandi</h1>
+        <nav>
+            <a href="#servicios">Servicios</a>
+            <a href="#traslados">Traslados</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Tu solución en transporte y grúas en Santiago</h1>
+    </div>
+
+    <main>
+        <section id="servicios">
+            <h2>Servicios que ofrecemos</h2>
+            <ul>
+                <li>Arriendo de grúas horquilla</li>
+                <li>Traslado de camiones y maquinaria</li>
+                <li>Montajes industriales</li>
+                <li>Servicios para particulares y empresas</li>
+            </ul>
+        </section>
+
+        <section id="traslados">
+            <h2>Solicita tu traslado</h2>
+            <form class="contact-form" action="mailto:juegosbabymandi@gmail.com" method="post" enctype="text/plain">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required />
+
+                <label for="empresa">Empresa o particular:</label>
+                <select id="empresa" name="empresa" required>
+                    <option value="">Selecciona</option>
+                    <option value="empresa">Empresa</option>
+                    <option value="particular">Particular</option>
+                </select>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required />
+
+                <label for="fecha">Fecha que necesita el traslado:</label>
+                <input type="date" id="fecha" name="fecha" required />
+
+                <label for="detalle">Detalle del traslado o flete:</label>
+                <textarea id="detalle" name="detalle" rows="4" placeholder="Describe el traslado..." required></textarea>
+
+                <button type="submit">Enviar solicitud</button>
+            </form>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Teléfono/WhatsApp: <a href="https://wa.me/56946535784" target="_blank">+56 9 4653 5784</a></p>
+            <p>Email: <a href="mailto:juegosbabymandi@gmail.com">juegosbabymandi@gmail.com</a></p>
+            <p>Dirección: Santiago, Chile</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Gruas Mandi - Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
