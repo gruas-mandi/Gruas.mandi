@@ -106,3 +106,22 @@ footer img {
   height: 24px;
   margin: 0 5px;
 }
+
+.carousel {
+  max-width: 700px;
+  margin: 40px auto;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: none;
+  width: 100%;
+}
+
+.carousel-slide img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
