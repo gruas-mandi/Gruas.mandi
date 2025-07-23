@@ -128,3 +128,50 @@ footer img {
   object-fit: cover;
 }
 
+.menu-header {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.logo-container .logo {
+  height: 60px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-nav {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-nav:hover {
+  background-color: #ffd700;
+  color: #000;
+}
+
+.iconos-redes {
+  display: flex;
+  gap: 10px;
+}
+
+.icono-red {
+  width: 24px;
+  height: 24px;
+}
+
