@@ -81,91 +81,25 @@ form button:hover {
   background-color: #ffc400;
 }
 
-footer {
-  background-color: #000;
-  padding: 20px;
-  text-align: center;
-  font-size: 14px;
-}
+/* === CARRUSEL CORREGIDO === */
 
-footer img {
-  height: 24px;
-  margin: 0 5px;
-}
-
-.carousel {
-  width: 100%;
-  max-width: 100%;
-  margin: 30px auto;
+.carousel-container {
   overflow: hidden;
-}
-
-
-.menu-header {
-  background-color: rgba(0, 0, 0, 0.6);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  position: relative;
-  z-index: 10;
-}
-
-.logo-container .logo {
-  height: 60px;
-}
-
-.nav-links {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.btn-nav {
-  background-color: #ffffff;
-  color: #000000;
-  padding: 8px 16px;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-.btn-nav:hover {
-  background-color: #ffd700;
-  color: #000;
-}
-
-.iconos-redes {
-  display: flex;
-  gap: 10px;
-}
-
-.icono-red {
-  width: 24px;
-  height: 24px;
-}
-
-.carousel {
   width: 100%;
-  overflow: hidden;
-  background: #fff;
-  padding: 20px 0;
+  margin: 40px auto;
 }
 
 .carousel-track {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   animation: scroll 30s linear infinite;
-  width: max-content;
 }
 
 .carousel-slide {
   flex: 0 0 auto;
-  width: 300px; /* Mostrar 2-3 según el tamaño de pantalla */
-  height: 200px;
+  width: 80vw;           /* Responsive */
+  max-width: 300px;      /* No más de 300px */
+  height: 180px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -182,6 +116,6 @@ footer img {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-3000px); /* Ajusta según cantidad de imágenes */
+    transform: translateX(-100%);
   }
 }
