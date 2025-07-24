@@ -46,6 +46,8 @@
 <!DOCTYPE html>
 
 <!-- Carrusel de imágenes -->
+
+<!-- Carrusel de imágenes -->
 <div class="carrusel">
   <div class="carrusel-imagenes">
     <img src="img/traslado-1.jpg" alt="traslado-1">
@@ -83,70 +85,34 @@
 
 .carrusel-imagenes {
   display: flex;
+  width: fit-content;
   animation: deslizar 60s linear infinite;
-  width: calc(100% * 19); /* 19 imágenes */
 }
 
 .carrusel-imagenes img {
-  width: 100%;
-  height: auto;
+  width: 33.33vw; /* Muestra 3 imágenes a la vez */
+  height: 250px;
   object-fit: cover;
-  flex: 0 0 100%;
+  margin-right: 5px;
   border-radius: 10px;
 }
 
-/* Animación */
+/* Animación infinita */
 @keyframes deslizar {
   0% { transform: translateX(0); }
-  5.26% { transform: translateX(-100%); }
-  10.53% { transform: translateX(-200%); }
-  15.79% { transform: translateX(-300%); }
-  21.05% { transform: translateX(-400%); }
-  26.32% { transform: translateX(-500%); }
-  31.58% { transform: translateX(-600%); }
-  36.84% { transform: translateX(-700%); }
-  42.11% { transform: translateX(-800%); }
-  47.37% { transform: translateX(-900%); }
-  52.63% { transform: translateX(-1000%); }
-  57.89% { transform: translateX(-1100%); }
-  63.16% { transform: translateX(-1200%); }
-  68.42% { transform: translateX(-1300%); }
-  73.68% { transform: translateX(-1400%); }
-  78.95% { transform: translateX(-1500%); }
-  84.21% { transform: translateX(-1600%); }
-  89.47% { transform: translateX(-1700%); }
-  94.74% { transform: translateX(-1800%); }
-  100% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carrusel-imagenes img {
+    width: 50vw; /* En celulares, muestra 2 imágenes a la vez */
+  }
 }
 </style>
 
 
 
-</body>
-</html>
-
-
-
-<!-- Script -->
-<script>
-  let slideIndex = 0;
-  const slides = document.querySelectorAll('.carousel-slide');
-  const totalSlides = slides.length;
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.style.display = i === index ? 'block' : 'none';
-    });
-  }
-
-  function nextSlide() {
-    slideIndex = (slideIndex + 1) % totalSlides;
-    showSlide(slideIndex);
-  }
-
-  showSlide(slideIndex);
-  setInterval(nextSlide, 4000);
-</script>
 
 
 
